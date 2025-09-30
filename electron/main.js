@@ -26,8 +26,10 @@ function createWindow() {
     show: false
   });
 
-  // Load app
-  if (process.env.NODE_ENV === 'development') {
+  // Load app - check if dev server is available
+  const isDev = !app.isPackaged;
+  
+  if (isDev) {
     mainWindow.loadURL('http://localhost:5173');
     mainWindow.webContents.openDevTools();
   } else {
@@ -48,7 +50,20 @@ function createWindow() {
 }
 
 function createTray() {
-  tray = new Tray(path.join(__dirname, '../public/tray-icon.png'));
+  // Try to create tray icon, but don't fail if image doesn't exist
+  try {
+    const iconPath = path.join(__dirname, '../public/tray-icon.png');
+    if (require('fs').existsSync(iconPath)) {
+      tray = new Tray(iconPath);
+    } else {
+      // Create tray without icon for now
+      console.log('Tray icon not found, skipping tray creation');
+      return;
+    }
+  } catch (error) {
+    console.log('Could not create tray:', error);
+    return;
+  }
   
   const contextMenu = Menu.buildFromTemplate([
     { label: 'Open ErgoWellness', click: () => mainWindow.show() },
