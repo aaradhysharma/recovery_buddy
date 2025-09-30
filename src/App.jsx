@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import Dashboard from './components/Dashboard';
-import Onboarding from './components/Onboarding';
+import OnboardingNew from './components/OnboardingNew';
 import PostureMonitor from './components/PostureMonitor';
 import Stretches from './components/Stretches';
 import Assessment from './components/Assessment';
@@ -76,7 +76,7 @@ function App() {
   }
 
   if (!isOnboarded) {
-    return <Onboarding onComplete={handleOnboardingComplete} />;
+    return <OnboardingNew onComplete={handleOnboardingComplete} />;
   }
 
   return (
@@ -106,7 +106,7 @@ function App() {
 
         {/* Version number */}
         <div className="fixed bottom-2 right-2 text-xs text-gray-400 dark:text-gray-600 pointer-events-none">
-          v0.0.2
+          v0.0.3
         </div>
       </div>
     </Router>

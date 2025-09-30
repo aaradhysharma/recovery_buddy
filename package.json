@@ -1,6 +1,6 @@
 {
   "name": "ergowellness",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Digital health coach for ergonomics and wellness - preventing shoulder pain and poor posture",
   "main": "electron/main.js",
   "type": "module",

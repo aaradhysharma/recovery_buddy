@@ -7,13 +7,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#3b82f6',
-        secondary: '#8b5cf6',
-        success: '#10b981',
-        warning: '#f59e0b',
-        danger: '#ef4444',
-        dark: '#1e293b',
-        light: '#f8fafc'
+        primary: '#FF4500',
+        secondary: '#0079D3',
+        success: '#46D160',
+        warning: '#FFB000',
+        danger: '#EA0027',
+        dark: '#1A1A1B',
+        light: '#FFFFFF',
+        reddit: {
+          orange: '#FF4500',
+          blue: '#0079D3',
+          background: '#DAE0E6',
+          card: '#FFFFFF',
+          border: '#EDEFF1'
+        }
       },
       animation: {
         'fade-in': 'fadeIn 0.3s ease-in-out',
