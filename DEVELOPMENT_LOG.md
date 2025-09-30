@@ -195,3 +195,5 @@ ergowellness/
 **Built with ❤️ for better ergonomics and wellness**
 
 *All features working, ready for installation and testing!*
+
+

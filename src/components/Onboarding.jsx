@@ -89,7 +89,7 @@ function Onboarding({ onComplete }) {
     },
     {
       title: 'Ergonomic Assessment',
-      description: 'Let's evaluate your workspace setup',
+      description: 'Let\'s evaluate your workspace setup',
       content: (
         <div className="space-y-4">
           <div>
