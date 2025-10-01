@@ -8,20 +8,9 @@ export default defineConfig({
     port: 3000,
     host: true,
   },
-  resolve: {
-    alias: {
-      // Stub optional TensorFlow backends that aren't needed for web
-      '@tensorflow/tfjs-backend-webgpu': '/src/stubs/tfjs-stub.js',
-      '@tensorflow/tfjs-backend-wasm': '/src/stubs/tfjs-stub.js',
-      '@tensorflow/tfjs-backend-cpu': '/src/stubs/tfjs-stub.js',
-    },
-  },
   build: {
     outDir: 'dist',
     sourcemap: false,
-    commonjsOptions: {
-      ignoreTryCatch: false,
-    },
     rollupOptions: {
       output: {
         manualChunks: {

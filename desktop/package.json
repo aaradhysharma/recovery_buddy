@@ -1,6 +1,6 @@
 {
   "name": "ergowellness-desktop",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "ErgoWellness Desktop App - AI-powered desk health monitor",
   "main": "electron/main.js",
   "type": "module",

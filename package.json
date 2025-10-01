@@ -1,6 +1,6 @@
 {
   "name": "ergowellness-monorepo",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "ErgoWellness - Desktop and Web App Monorepo",
   "private": true,
   "workspaces": [

@@ -106,7 +106,7 @@ function App() {
 
         {/* Version number */}
         <div className="fixed bottom-2 right-2 text-xs text-gray-400 dark:text-gray-600 pointer-events-none">
-          v0.0.6
+          v0.0.7
         </div>
       </div>
     </Router>
