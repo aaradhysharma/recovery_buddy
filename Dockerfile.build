@@ -1,0 +1,32 @@
+# Production Build Dockerfile
+# Builds the Electron app for all platforms
+
+FROM node:20-bullseye
+
+# Install build dependencies
+RUN apt-get update && apt-get install -y \
+    wine \
+    wine32 \
+    wine64 \
+    rpm \
+    fakeroot \
+    dpkg \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+
+# Install dependencies
+RUN npm ci --production=false
+
+# Copy source
+COPY . .
+
+# Build the application
+RUN npm run build
+
+# Build Electron distributables
+CMD ["npm", "run", "electron:build"]
+

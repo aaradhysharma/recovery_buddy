@@ -1,0 +1,44 @@
+# Dependencies
+node_modules
+npm-debug.log
+package-lock.json
+yarn.lock
+
+# Build outputs
+dist
+dist-electron
+build
+
+# Git
+.git
+.gitignore
+.github
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env files
+.env
+.env.local
+
+# Logs
+logs
+*.log
+
+# User data
+user-data
+
+# Documentation
+*.md
+!README.md
+
+# CI/CD
+.github/workflows
+

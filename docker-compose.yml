@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  # Development environment
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ergowellness-dev
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "5173:5173"
+    environment:
+      - NODE_ENV=development
+      - VITE_HOST=0.0.0.0
+    command: npm run dev
+    stdin_open: true
+    tty: true
+
+  # Build environment (for creating distributable)
+  build:
+    build:
+      context: .
+      dockerfile: Dockerfile.build
+    container_name: ergowellness-build
+    volumes:
+      - ./dist-electron:/app/dist-electron
+    environment:
+      - NODE_ENV=production
+    command: npm run electron:build
+

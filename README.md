@@ -1,8 +1,13 @@
-# ErgoWellness v0.0.1
+# ErgoWellness v0.0.3
 
-**Your Digital Ergonomics & Wellness Coach**
+[![Build Status](https://img.shields.io/github/actions/workflow/status/YOUR_USERNAME/ergowellness/build.yml?branch=master)](https://github.com/YOUR_USERNAME/ergowellness/actions)
+[![Release](https://img.shields.io/github/v/release/YOUR_USERNAME/ergowellness)](https://github.com/YOUR_USERNAME/ergowellness/releases)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)](https://github.com/YOUR_USERNAME/ergowellness)
 
-ErgoWellness helps prevent and relieve shoulder pain caused by poor posture and prolonged sitting. Perfect for desk workers, students, and anyone who spends long hours at a computer.
+**AI-Powered Desk Health Monitor with Real-Time Posture Detection**
+
+ErgoWellness uses computer vision and AI to monitor your posture, prevent carpal tunnel, reduce eye strain, and address all desk work health issues. Privacy-first with local processing.
 
 ## 🎯 Features
 
@@ -64,6 +69,33 @@ ergowellness/
 - **GDPR Compliant**: Full control over your data
 - **Medical Disclaimer**: Not a substitute for professional medical advice
 
+## 🚀 DevOps & CI/CD
+
+### Automated Build Pipeline
+- **GitHub Actions**: Auto-builds for Windows, macOS, Linux
+- **Code Quality**: Automated linting and security audits
+- **Releases**: Automated version tagging and distribution
+
+### Quick Deploy
+```bash
+# Using Makefile
+make deploy
+
+# Or manually
+./scripts/deploy.sh patch
+```
+
+### Docker Development
+```bash
+# Start development environment
+docker-compose up dev
+
+# Build distributables
+docker-compose up build
+```
+
+📖 **Full DevOps Guide**: See [DEVOPS.md](DEVOPS.md)
+
 ## 📝 License
 
 MIT License - See LICENSE file for details
@@ -74,5 +106,5 @@ This app provides general wellness guidance and is not a substitute for professi
 
 ---
 
-**Version**: 0.0.1  
-**Last Updated**: September 30, 2025
+**Version**: 0.0.3  
+**Last Updated**: October 1, 2025
