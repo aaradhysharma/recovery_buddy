@@ -33,3 +33,14 @@ Thumbs.db
 
 # User data
 user-data/
+
+# Vercel
+.vercel
+web/.vercel
+
+# Monorepo specific
+desktop/node_modules
+web/node_modules
+shared/node_modules
+desktop/dist
+web/dist

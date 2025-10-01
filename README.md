@@ -1,13 +1,21 @@
 # ErgoWellness v0.0.3
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/YOUR_USERNAME/ergowellness/build.yml?branch=master)](https://github.com/YOUR_USERNAME/ergowellness/actions)
-[![Release](https://img.shields.io/github/v/release/YOUR_USERNAME/ergowellness)](https://github.com/YOUR_USERNAME/ergowellness/releases)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/aaradhysharma/recovery_buddy/build.yml?branch=master)](https://github.com/aaradhysharma/recovery_buddy/actions)
+[![Release](https://img.shields.io/github/v/release/aaradhysharma/recovery_buddy)](https://github.com/aaradhysharma/recovery_buddy/releases)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)](https://github.com/YOUR_USERNAME/ergowellness)
+[![Platform](https://img.shields.io/badge/platform-Web%20%7C%20Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)](https://github.com/aaradhysharma/recovery_buddy)
+[![Deploy with Vercel](https://img.shields.io/badge/deploy-vercel-black)](https://vercel.com/new/clone?repository-url=https://github.com/aaradhysharma/recovery_buddy/tree/master/web)
 
-**AI-Powered Desk Health Monitor with Real-Time Posture Detection**
+**AI-Powered Desk Health Monitor - Available as Web & Desktop App**
 
 ErgoWellness uses computer vision and AI to monitor your posture, prevent carpal tunnel, reduce eye strain, and address all desk work health issues. Privacy-first with local processing.
+
+## 🎯 Choose Your Version
+
+| Version | Best For | Link |
+|---------|----------|------|
+| **🌐 Web App** | Instant access, works everywhere | [Try Now](#) / [Deploy on Vercel](#vercel-deployment) |
+| **💻 Desktop App** | Advanced features, system integration | [Download from Releases](https://github.com/aaradhysharma/recovery_buddy/releases) |
 
 ## 🎯 Features
 
@@ -48,19 +56,47 @@ npm run electron:build
 - **Storage**: SQLite + electron-store
 - **Animations**: Framer Motion
 
-## 📁 Project Structure
+## 📁 Monorepo Structure
 
 ```
-ergowellness/
-├── electron/          # Electron main process
-├── src/
-│   ├── components/    # React components
-│   ├── services/      # Business logic
-│   ├── data/          # Static content
-│   ├── hooks/         # Custom React hooks
-│   └── utils/         # Helper functions
-└── public/            # Static assets
+recovery_buddy/
+├── web/              # 🌐 Web App (Vercel)
+│   ├── src/          # React components
+│   ├── public/       # Static assets
+│   ├── vercel.json   # Vercel config
+│   └── package.json
+├── desktop/          # 💻 Desktop App (Electron)
+│   ├── src/          # React components
+│   ├── electron/     # Electron main process
+│   ├── public/       # Static assets
+│   └── package.json
+├── shared/           # 🔄 Shared components (future)
+├── .github/          # CI/CD workflows
+│   └── workflows/
+│       ├── build.yml    # Desktop builds
+│       └── quality.yml  # Code quality
+└── package.json      # Root workspace config
 ```
+
+## 🚀 Vercel Deployment
+
+### Option 1: One-Click Deploy
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/aaradhysharma/recovery_buddy/tree/master/web)
+
+### Option 2: Vercel Dashboard
+1. Go to [vercel.com](https://vercel.com)
+2. Import your GitHub repository
+3. Set **Root Directory** to `web/`
+4. Click Deploy!
+
+### Option 3: CLI
+```bash
+npm install -g vercel
+cd web
+vercel --prod
+```
+
+**That's it!** Auto-deploys on every push to master! 🎉
 
 ## 🔒 Privacy & Security
 
