@@ -1,6 +1,6 @@
 {
   "name": "ergowellness-web",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "ErgoWellness Web App - AI-powered desk health monitor",
   "type": "module",
   "scripts": {
@@ -13,6 +13,7 @@
   "author": "Your Name",
   "license": "MIT",
   "dependencies": {
+    "@mediapipe/pose": "^0.5.1635989137",
     "@tensorflow-models/pose-detection": "^2.0.0",
     "@tensorflow/tfjs": "^4.17.0",
     "@tensorflow/tfjs-backend-webgl": "^4.17.0",
