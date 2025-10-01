@@ -8,13 +8,24 @@ export default defineConfig({
     port: 3000,
     host: true,
   },
+  resolve: {
+    alias: {
+      // Stub optional TensorFlow backends that aren't needed for web
+      '@tensorflow/tfjs-backend-webgpu': '/src/stubs/tfjs-stub.js',
+      '@tensorflow/tfjs-backend-wasm': '/src/stubs/tfjs-stub.js',
+      '@tensorflow/tfjs-backend-cpu': '/src/stubs/tfjs-stub.js',
+    },
+  },
   build: {
     outDir: 'dist',
     sourcemap: false,
+    commonjsOptions: {
+      ignoreTryCatch: false,
+    },
     rollupOptions: {
       output: {
         manualChunks: {
-          'tensorflow': ['@tensorflow/tfjs-core', '@tensorflow/tfjs-backend-webgl', '@tensorflow-models/posenet'],
+          'tensorflow': ['@tensorflow/tfjs', '@tensorflow/tfjs-core', '@tensorflow/tfjs-backend-webgl', '@tensorflow-models/pose-detection'],
           'react-vendor': ['react', 'react-dom', 'react-router-dom'],
           'charts': ['chart.js', 'react-chartjs-2'],
         },
@@ -22,7 +33,7 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    include: ['@tensorflow/tfjs-core', '@tensorflow/tfjs-backend-webgl', '@tensorflow-models/posenet'],
+    include: ['@tensorflow/tfjs', '@tensorflow/tfjs-core', '@tensorflow/tfjs-backend-webgl', '@tensorflow-models/pose-detection'],
   },
 });
 

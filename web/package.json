@@ -1,6 +1,6 @@
 {
   "name": "ergowellness-web",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "ErgoWellness Web App - AI-powered desk health monitor",
   "type": "module",
   "scripts": {
