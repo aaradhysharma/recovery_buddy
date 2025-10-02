@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "noEmit": true,
+    "types": ["react", "react-native", "react-native-dotenv"],
+    "paths": {
+      "@shared/*": ["../shared/src/*"]
+    }
+  },
+  "extends": "expo/tsconfig.base"
+}

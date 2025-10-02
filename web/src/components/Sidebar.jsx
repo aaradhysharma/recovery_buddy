@@ -65,7 +65,7 @@ function Sidebar({ darkMode, toggleDarkMode }) {
           </button>
           
           <div className="text-xs text-neutral-500 dark:text-neutral-400">
-            v0.0.7
+            v0.0.8
           </div>
         </div>
       </div>
