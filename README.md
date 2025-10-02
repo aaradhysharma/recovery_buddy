@@ -1,12 +1,12 @@
-# ErgoWellness v0.0.3
+# ErgoWellness v0.0.9
 
 [![Build Status](https://img.shields.io/github/actions/workflow/status/aaradhysharma/recovery_buddy/build.yml?branch=master)](https://github.com/aaradhysharma/recovery_buddy/actions)
 [![Release](https://img.shields.io/github/v/release/aaradhysharma/recovery_buddy)](https://github.com/aaradhysharma/recovery_buddy/releases)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Platform](https://img.shields.io/badge/platform-Web%20%7C%20Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)](https://github.com/aaradhysharma/recovery_buddy)
+[![Platform](https://img.shields.io/badge/platform-Web%20%7C%20Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android%20%7C%20iOS-lightgrey.svg)](https://github.com/aaradhysharma/recovery_buddy)
 [![Deploy with Vercel](https://img.shields.io/badge/deploy-vercel-black)](https://vercel.com/new/clone?repository-url=https://github.com/aaradhysharma/recovery_buddy/tree/master/web)
 
-**AI-Powered Desk Health Monitor - Available as Web & Desktop App**
+**AI-Powered Desk Health Monitor - Available as Web, Desktop & Mobile App**
 
 ErgoWellness uses computer vision and AI to monitor your posture, prevent carpal tunnel, reduce eye strain, and address all desk work health issues. Privacy-first with local processing.
 
@@ -16,6 +16,7 @@ ErgoWellness uses computer vision and AI to monitor your posture, prevent carpal
 |---------|----------|------|
 | **🌐 Web App** | Instant access, works everywhere | [Try Now](#) / [Deploy on Vercel](#vercel-deployment) |
 | **💻 Desktop App** | Advanced features, system integration | [Download from Releases](https://github.com/aaradhysharma/recovery_buddy/releases) |
+| **📱 Android App** | On-the-go health tracking | [Build from Source](#android-setup) |
 
 ## 🎯 Features
 
@@ -51,9 +52,10 @@ npm run electron:build
 
 - **Frontend**: React 18 + Vite
 - **Desktop**: Electron 28
+- **Mobile**: React Native + Expo
 - **Styling**: Tailwind CSS
 - **Charts**: Chart.js
-- **Storage**: SQLite + electron-store
+- **Storage**: SQLite + electron-store + AsyncStorage
 - **Animations**: Framer Motion
 
 ## 📁 Monorepo Structure
@@ -70,7 +72,12 @@ recovery_buddy/
 │   ├── electron/     # Electron main process
 │   ├── public/       # Static assets
 │   └── package.json
-├── shared/           # 🔄 Shared components (future)
+├── android/          # 📱 Android App (React Native)
+│   ├── src/          # React Native components
+│   ├── assets/       # Mobile assets
+│   ├── app.json      # Expo config
+│   └── package.json
+├── shared/           # 🔄 Shared components & data
 ├── .github/          # CI/CD workflows
 │   └── workflows/
 │       ├── build.yml    # Desktop builds
@@ -97,6 +104,28 @@ vercel --prod
 ```
 
 **That's it!** Auto-deploys on every push to master! 🎉
+
+## 📱 Android Setup
+
+### Prerequisites
+- Node.js 18+
+- Expo CLI
+- Android Studio (optional, for emulator)
+
+### Development
+```bash
+cd android
+npm install
+npm start
+```
+
+Scan the QR code with Expo Go app on your Android device!
+
+### Build APK
+```bash
+cd android
+npx expo build:android
+```
 
 ## 🔒 Privacy & Security
 
@@ -142,5 +171,5 @@ This app provides general wellness guidance and is not a substitute for professi
 
 ---
 
-**Version**: 0.0.3  
-**Last Updated**: October 1, 2025
+**Version**: 0.0.9  
+**Last Updated**: October 2, 2025
